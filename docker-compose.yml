@@ -1,0 +1,10 @@
+version: '3'
+services:
+  httpd:
+    image: gitsync
+    restart: always
+    env_file:
+      - container.env
+    #REMOVE WHEN USING PROXY:
+    ports:
+      - "8080:80"
